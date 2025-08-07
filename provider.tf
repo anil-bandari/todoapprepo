@@ -25,3 +25,8 @@ resource "azurerm_resource_group" "RG2" {
   location = "East US"
   
 }
+resource "azurerm_resource_group" "RG3" {
+  name     = "todoapp-rg3"
+  location = "East US"
+  
+}
