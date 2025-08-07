@@ -29,7 +29,7 @@ resource "azurerm_resource_group" "RG3" {
   location = "East US"
   
 }
-}
+
 resource "azurerm_resource_group" "RG4" {
   name     = "todoapp-rg4"
   location = "East US"
