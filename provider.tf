@@ -11,9 +11,8 @@ provider "azurerm" {
 
   features {
   }
-  subscription_id = "a9dcdbff-16a5-4c50-b433-974c8a920b84"
+  subscription_id = "9a19641f-a0da-455d-9b90-51dc0d0cdfee"
 }
-
 resource "azurerm_resource_group" "RG1" {
   name     = "todoapp-rg"
   location = "East US"
