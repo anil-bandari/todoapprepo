@@ -25,4 +25,10 @@ jobs:
   displayName: MnualValidation
   dependsOn: infracodejob
   pool: server
+  steps:
+  - task: ManualValidation@0
+    timeoutInMinutes: 60  # approval ka wait time
+    inputs:
+      instructions: 'Please validate the infrastructure changes before proceeding.'
+      onTimeout: 'reject' 
   
