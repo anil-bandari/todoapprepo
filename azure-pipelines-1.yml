@@ -1,11 +1,10 @@
 trigger:
 - main
 
-pool: 
-Agentpool_infra
+pool: Agentpool_infra
 
 jobs:
-- job: infra-code-job  
+- job: infracodejob  
   displayName: infra-code-job
   pool: Agentpool_infra
   steps: 
