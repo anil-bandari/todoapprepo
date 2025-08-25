@@ -1,0 +1,19 @@
+trigger:
+- main
+
+pool: 
+Agentpool_infra
+
+jobs:
+- job: infra-code-job  
+  displayName: infra-code-job
+  pool: Agentpool_infra
+  steps: 
+  - task: TerraformTask@5
+    inputs:
+      provider: 'azurerm'
+      command: 'init'
+      backendServiceArm: 'pipeline service connection'
+      backendAzureRmStorageAccountName: 'pipelinestorage1007'
+      backendAzureRmContainerName: 'pipelinecontainer'
+      backendAzureRmKey: 'terraform.tfstate'
