@@ -16,3 +16,13 @@ jobs:
       backendAzureRmStorageAccountName: 'pipelinestorage1007'
       backendAzureRmContainerName: 'pipelinecontainer'
       backendAzureRmKey: 'terraform.tfstate'
+  - task: TerraformTask@5
+    inputs:
+      provider: 'azurerm'
+      command: 'plan'
+      environmentServiceNameAzureRM: 'pipeline service connection'
+- job: manualValidation
+  displayName: MnualValidation
+  dependsOn: infracodejob
+  pool: server
+  
